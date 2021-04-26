@@ -76,5 +76,5 @@ class AI:
         return self.response
 # initiate 
 ai = AI()
-text = ai.generate_text("illuminati")
+#text = ai.generate_text("illuminati")
 print(text)
