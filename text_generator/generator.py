@@ -77,4 +77,4 @@ class AI:
 # initiate 
 ai = AI()
 #text = ai.generate_text("illuminati")
-print(text)
+#print(text)
