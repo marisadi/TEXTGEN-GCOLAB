@@ -1,5 +1,5 @@
 # Text-Generator-GPT-2
-A Text Generator with OpenAI GPT and Python using Flask and Heroku to deploy
+This is the text generator cloned into my text to text to image google colab notebook
 
 Built from follwing this tutorial:
 https://www.youtube.com/watch?v=WRVx8vGDKf4
