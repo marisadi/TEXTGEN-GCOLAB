@@ -13,19 +13,28 @@ from text_generator import encoder
 # define class
 class AI:
     def generate_text(self, input_text):
-        model_name='124M_TRAINED' #String, which model to use
-        seed=None #Integer seed for random number generators, fix seed to reproduce results
-        nsamples=1 #Number of samples to return total
-        batch_size=1 #Number of batches (only affects speed/memory).  Must divide nsamples.
-        length=150 #Number of tokens in generated text, if None (default), is determined by model hyperparameters
-        temperature=1 #Float value controlling randomness in boltzmann 
+        #String, which model to use
+        model_name='124M_TRAINED'
+        #Integer seed for random number generators, fix seed to reproduce results
+        seed=None 
+        #Number of samples to return total
+        nsamples=1 
+        #Number of batches (only affects speed/memory).  Must divide nsamples.
+        batch_size=1
+        # Number of tokens in generated text, if None (default 1023, the maximum)
+        length=1023
+        #Float value controlling randomness in boltzmann 
         # distribution. Lower temperature results in less random completions. As the
         # temperature approaches zero, the model will become deterministic and
         # repetitive. Higher temperature results in more random completions.
-        top_k=40 # Integer value controlling diversity. 1 means only 1 word is
+        temperature=1 
+        # Integer value controlling diversity. 1 means only 1 word is
         # considered for each step (token), resulting in deterministic completions,
         # while 40 means 40 words are considered at each step. 0 (default) is a
         # special setting meaning no restrictions. 40 generally is a good value.
+        top_k=40
+        # Nucleus sampling: limits the generated guesses to a cumulative probability. 
+		# (gets good results on a dataset with top_p=0.9) 
         top_p=1
         #:models_dir : path to parent folder containing model subfolders (i.e. contains the <model_name> folder)
         self.response = "" 
@@ -76,5 +85,3 @@ class AI:
         return self.response
 # initiate 
 ai = AI()
-#text = ai.generate_text("illuminati")
-#print(text)
