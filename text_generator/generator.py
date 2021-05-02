@@ -80,7 +80,8 @@ class AI:
                     generated += 1
                     # our response/generated text
                     text = enc.decode(out[i])
-                    self.response = text
+		    # prefix response with inout text
+                    self.response = input_text + text
         # return generated text
         return self.response
 # initiate 
