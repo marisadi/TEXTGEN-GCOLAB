@@ -27,7 +27,7 @@ class AI:
         # distribution. Lower temperature results in less random completions. As the
         # temperature approaches zero, the model will become deterministic and
         # repetitive. Higher temperature results in more random completions.
-        temperature=1 
+        temperature=0.8 
         # Integer value controlling diversity. 1 means only 1 word is
         # considered for each step (token), resulting in deterministic completions,
         # while 40 means 40 words are considered at each step. 0 (default) is a
